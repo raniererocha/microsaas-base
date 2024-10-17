@@ -14,3 +14,6 @@ export default function middleware(request: NextRequest) {
         return NextResponse.redirect(process.env.NEXTAUTH_URL + '/app')
     }
 }
+export const config = {
+    matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)'],
+}
